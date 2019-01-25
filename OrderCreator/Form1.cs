@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace OrderCreator
 {
-    public partial class Form1 : Form
+    public partial class OrderCreator : Form
     {
-        public Form1()
+        public OrderCreator()
         {
             InitializeComponent();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
