@@ -45,7 +45,7 @@
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,7 +54,7 @@
             this.buttonSaveToXML = new System.Windows.Forms.Button();
             this.groupBoxProduct.SuspendLayout();
             this.groupBoxUser.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // firstName
@@ -206,6 +206,7 @@
             this.buttonAdd.TabIndex = 7;
             this.buttonAdd.Text = "Dodaj";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonDelete
             // 
@@ -225,19 +226,20 @@
             this.buttonUpdate.Text = "Zmień";
             this.buttonUpdate.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView.AllowUserToAddRows = false;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridProductName,
             this.dataGridQuantity,
             this.dataGridPrice});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 217);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 30;
-            this.dataGridView1.RowTemplate.Height = 30;
-            this.dataGridView1.Size = new System.Drawing.Size(633, 183);
-            this.dataGridView1.TabIndex = 8;
+            this.dataGridView.Location = new System.Drawing.Point(12, 217);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.RowHeadersWidth = 30;
+            this.dataGridView.RowTemplate.Height = 30;
+            this.dataGridView.Size = new System.Drawing.Size(633, 183);
+            this.dataGridView.TabIndex = 8;
             // 
             // dataGridProductName
             // 
@@ -283,6 +285,7 @@
             this.buttonSaveToXML.TabIndex = 11;
             this.buttonSaveToXML.Text = "Zapisz do XML";
             this.buttonSaveToXML.UseVisualStyleBackColor = true;
+            this.buttonSaveToXML.Click += new System.EventHandler(this.buttonSaveToXML_Click);
             // 
             // OrderCreator
             // 
@@ -292,7 +295,7 @@
             this.Controls.Add(this.buttonSaveToXML);
             this.Controls.Add(this.buttonSaveDataToDatabase);
             this.Controls.Add(this.labelProductList);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.groupBoxUser);
             this.Controls.Add(this.groupBoxProduct);
             this.Name = "OrderCreator";
@@ -301,7 +304,7 @@
             this.groupBoxProduct.PerformLayout();
             this.groupBoxUser.ResumeLayout(false);
             this.groupBoxUser.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,7 +329,7 @@
         private System.Windows.Forms.TextBox productQuantity;
         private System.Windows.Forms.TextBox productName;
         private System.Windows.Forms.GroupBox groupBoxUser;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridProductName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridQuantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridPrice;
