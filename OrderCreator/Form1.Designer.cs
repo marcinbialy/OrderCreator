@@ -35,16 +35,16 @@
             this.labelLastName = new System.Windows.Forms.Label();
             this.labelDateOfBirth = new System.Windows.Forms.Label();
             this.groupBoxProduct = new System.Windows.Forms.GroupBox();
-            this.productName = new System.Windows.Forms.TextBox();
-            this.productQuantity = new System.Windows.Forms.TextBox();
-            this.productPrice = new System.Windows.Forms.TextBox();
-            this.labelProductName = new System.Windows.Forms.Label();
-            this.labelProductQuantity = new System.Windows.Forms.Label();
-            this.labelProductPrice = new System.Windows.Forms.Label();
-            this.groupBoxUser = new System.Windows.Forms.GroupBox();
-            this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
+            this.buttonDelete = new System.Windows.Forms.Button();
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.labelProductPrice = new System.Windows.Forms.Label();
+            this.labelProductQuantity = new System.Windows.Forms.Label();
+            this.labelProductName = new System.Windows.Forms.Label();
+            this.productPrice = new System.Windows.Forms.TextBox();
+            this.productQuantity = new System.Windows.Forms.TextBox();
+            this.productName = new System.Windows.Forms.TextBox();
+            this.groupBoxUser = new System.Windows.Forms.GroupBox();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -129,39 +129,45 @@
             this.groupBoxProduct.TabStop = false;
             this.groupBoxProduct.Text = "Produkt";
             // 
-            // productName
+            // buttonUpdate
             // 
-            this.productName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.productName.Location = new System.Drawing.Point(75, 30);
-            this.productName.Name = "productName";
-            this.productName.Size = new System.Drawing.Size(311, 27);
-            this.productName.TabIndex = 1;
+            this.buttonUpdate.Location = new System.Drawing.Point(155, 122);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(100, 30);
+            this.buttonUpdate.TabIndex = 9;
+            this.buttonUpdate.Text = "Zmień";
+            this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
-            // productQuantity
+            // buttonDelete
             // 
-            this.productQuantity.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.productQuantity.Location = new System.Drawing.Point(75, 68);
-            this.productQuantity.Name = "productQuantity";
-            this.productQuantity.Size = new System.Drawing.Size(122, 27);
-            this.productQuantity.TabIndex = 2;
+            this.buttonDelete.Location = new System.Drawing.Point(286, 122);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(100, 30);
+            this.buttonDelete.TabIndex = 8;
+            this.buttonDelete.Text = "Usuń";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
-            // productPrice
+            // buttonAdd
             // 
-            this.productPrice.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.productPrice.Location = new System.Drawing.Point(261, 67);
-            this.productPrice.Name = "productPrice";
-            this.productPrice.Size = new System.Drawing.Size(125, 27);
-            this.productPrice.TabIndex = 3;
+            this.buttonAdd.Location = new System.Drawing.Point(19, 122);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(100, 30);
+            this.buttonAdd.TabIndex = 7;
+            this.buttonAdd.Text = "Dodaj";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
-            // labelProductName
+            // labelProductPrice
             // 
-            this.labelProductName.AutoSize = true;
-            this.labelProductName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelProductName.Location = new System.Drawing.Point(15, 33);
-            this.labelProductName.Name = "labelProductName";
-            this.labelProductName.Size = new System.Drawing.Size(54, 20);
-            this.labelProductName.TabIndex = 4;
-            this.labelProductName.Text = "Nazwa";
+            this.labelProductPrice.AutoSize = true;
+            this.labelProductPrice.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelProductPrice.Location = new System.Drawing.Point(213, 70);
+            this.labelProductPrice.Name = "labelProductPrice";
+            this.labelProductPrice.Size = new System.Drawing.Size(42, 20);
+            this.labelProductPrice.TabIndex = 6;
+            this.labelProductPrice.Text = "Cena";
             // 
             // labelProductQuantity
             // 
@@ -173,15 +179,39 @@
             this.labelProductQuantity.TabIndex = 5;
             this.labelProductQuantity.Text = "Ilość";
             // 
-            // labelProductPrice
+            // labelProductName
             // 
-            this.labelProductPrice.AutoSize = true;
-            this.labelProductPrice.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelProductPrice.Location = new System.Drawing.Point(213, 70);
-            this.labelProductPrice.Name = "labelProductPrice";
-            this.labelProductPrice.Size = new System.Drawing.Size(42, 20);
-            this.labelProductPrice.TabIndex = 6;
-            this.labelProductPrice.Text = "Cena";
+            this.labelProductName.AutoSize = true;
+            this.labelProductName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelProductName.Location = new System.Drawing.Point(15, 33);
+            this.labelProductName.Name = "labelProductName";
+            this.labelProductName.Size = new System.Drawing.Size(54, 20);
+            this.labelProductName.TabIndex = 4;
+            this.labelProductName.Text = "Nazwa";
+            // 
+            // productPrice
+            // 
+            this.productPrice.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.productPrice.Location = new System.Drawing.Point(261, 67);
+            this.productPrice.Name = "productPrice";
+            this.productPrice.Size = new System.Drawing.Size(125, 27);
+            this.productPrice.TabIndex = 3;
+            // 
+            // productQuantity
+            // 
+            this.productQuantity.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.productQuantity.Location = new System.Drawing.Point(75, 68);
+            this.productQuantity.Name = "productQuantity";
+            this.productQuantity.Size = new System.Drawing.Size(122, 27);
+            this.productQuantity.TabIndex = 2;
+            // 
+            // productName
+            // 
+            this.productName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.productName.Location = new System.Drawing.Point(75, 30);
+            this.productName.Name = "productName";
+            this.productName.Size = new System.Drawing.Size(311, 27);
+            this.productName.TabIndex = 1;
             // 
             // groupBoxUser
             // 
@@ -198,34 +228,6 @@
             this.groupBoxUser.TabStop = false;
             this.groupBoxUser.Text = "Zamawiający";
             // 
-            // buttonAdd
-            // 
-            this.buttonAdd.Location = new System.Drawing.Point(19, 122);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(100, 30);
-            this.buttonAdd.TabIndex = 7;
-            this.buttonAdd.Text = "Dodaj";
-            this.buttonAdd.UseVisualStyleBackColor = true;
-            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
-            // 
-            // buttonDelete
-            // 
-            this.buttonDelete.Location = new System.Drawing.Point(155, 122);
-            this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(100, 30);
-            this.buttonDelete.TabIndex = 8;
-            this.buttonDelete.Text = "Usuń";
-            this.buttonDelete.UseVisualStyleBackColor = true;
-            // 
-            // buttonUpdate
-            // 
-            this.buttonUpdate.Location = new System.Drawing.Point(286, 122);
-            this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(100, 30);
-            this.buttonUpdate.TabIndex = 9;
-            this.buttonUpdate.Text = "Zmień";
-            this.buttonUpdate.UseVisualStyleBackColor = true;
-            // 
             // dataGridView
             // 
             this.dataGridView.AllowUserToAddRows = false;
@@ -238,8 +240,10 @@
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersWidth = 30;
             this.dataGridView.RowTemplate.Height = 30;
+            this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView.Size = new System.Drawing.Size(633, 183);
             this.dataGridView.TabIndex = 8;
+            this.dataGridView.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView_MouseClick);
             // 
             // dataGridProductName
             // 
@@ -276,6 +280,7 @@
             this.buttonSaveDataToDatabase.TabIndex = 10;
             this.buttonSaveDataToDatabase.Text = "Zapisz do bazy danych";
             this.buttonSaveDataToDatabase.UseVisualStyleBackColor = true;
+            this.buttonSaveDataToDatabase.Click += new System.EventHandler(this.buttonSaveDataToDatabase_Click);
             // 
             // buttonSaveToXML
             // 

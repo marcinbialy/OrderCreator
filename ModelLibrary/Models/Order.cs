@@ -16,5 +16,21 @@ namespace ModelLibrary.Models
         public double Price { get; set; }
         public int Quantity { get; set; }
         public Customer Customer { get; set; }
+
+        public Order()
+        {
+
+        }
+
+        public Order(string productName, string quantity, string price)
+        {
+            float.TryParse(price, out float ProductPrice);
+            Price = ProductPrice;
+
+            int.TryParse(quantity, out int ProductQuantity);
+            Quantity = ProductQuantity;
+
+            ProductName = productName;
+        }
     }
 }
