@@ -19,24 +19,5 @@ namespace ModelLibrary.Models
         public string LastName { get; set; }
         public DateTime Birthdate { get; set; }
         public IList<Order> Orders { get; set; }
-
-        public Customer()
-        {
-
-        }
-
-        public Customer(string firstName, string lasName, string birthdate)
-        {
-            FirstName = firstName;
-            LastName = lasName;
-
-            DateTime dateTime;
-            DateTime.TryParseExact(birthdate, "dd-mm-yyyy",
-                       CultureInfo.InvariantCulture,
-                       DateTimeStyles.None,
-                       out dateTime);
-
-            Birthdate = dateTime;
-        }
     }
 }
