@@ -76,10 +76,15 @@
             // dateOfBirth
             // 
             this.dateOfBirth.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.dateOfBirth.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.dateOfBirth.Location = new System.Drawing.Point(123, 119);
             this.dateOfBirth.Name = "dateOfBirth";
             this.dateOfBirth.Size = new System.Drawing.Size(203, 27);
             this.dateOfBirth.TabIndex = 2;
+            this.dateOfBirth.Text = "YYYY-MM-DD";
+            this.dateOfBirth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.dateOfBirth.Enter += new System.EventHandler(this.dateOfBirth_Enter);
+            this.dateOfBirth.Leave += new System.EventHandler(this.dateOfBirth_Leave);
             // 
             // labelFirstName
             // 
