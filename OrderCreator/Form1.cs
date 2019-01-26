@@ -22,6 +22,14 @@ namespace OrderCreator
             InitializeComponent();
         }
 
+        // CLEAR TEXT BOXSES
+        private void Clear()
+        {
+            productName.Clear();
+            productQuantity.Clear();
+            productPrice.Clear();
+        }
+
         // ADD PRODUCT TO DataGridView
         private void buttonAdd_Click(object sender, EventArgs e)
         {
@@ -31,6 +39,8 @@ namespace OrderCreator
                 dataGridView.Rows[row].Cells[0].Value = productName.Text;
                 dataGridView.Rows[row].Cells[1].Value = productQuantity.Text;
                 dataGridView.Rows[row].Cells[2].Value = productPrice.Text;
+
+                Clear();
             }
             else
             {
@@ -133,18 +143,21 @@ namespace OrderCreator
                 dataGridView.SelectedRows[0].Cells[0].Value = productName.Text;
                 dataGridView.SelectedRows[0].Cells[1].Value = productQuantity.Text;
                 dataGridView.SelectedRows[0].Cells[2].Value = productPrice.Text;
+
+                Clear();
             }
             else
             {
                 MessageBox.Show("Wypełnij pola poprawnie!");
-            }
-            
+            }  
         }
 
         //DELETE ROW
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             dataGridView.Rows.RemoveAt(dataGridView.SelectedRows[0].Index);
+
+            Clear();
         }
     }
 }
